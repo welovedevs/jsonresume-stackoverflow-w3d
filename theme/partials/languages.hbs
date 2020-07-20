@@ -12,13 +12,9 @@
       </h3>
       {{/if}}
       <div class="item">
-        {{#if fluency}}
-        <div class="level fluency {{toLowerCase fluency}}">
-          {{#if fluencyDisplay}}
-          <em>{{fluencyDisplay}}</em>
-          {{else}}
-          <em>{{fluency}}</em>
-          {{/if}}
+        {{#if value}}
+        <div class="level fluency {{getLevel value}}">
+          <em>{{value}} %</em>
           <div class="bar"></div>
         </div>
         {{/if}}

@@ -1,5 +1,5 @@
 const getLevel = (value) => {
-  if (value >= 90) {
+  if (value === 100) {
     return 'master'
   }
   if (value >= 70) {

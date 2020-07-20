@@ -1,0 +1,35 @@
+{{#resume.specific.dreamJob}}
+  <section class="section">
+    <header>
+      <h2 class='section-title'>Dream job</h2>
+    </header>
+    <section id="dreamjob">
+      <div class="informations">
+        {{#if salary}}
+          <div id="salary">
+            <h6 class="label">Ideal annual salary</h6>
+            <span>{{salary}} k</span>
+          </div>
+        {{/if}}
+        {{#if locations.length}}
+          <div id="location">
+            <h6 class="label">Locations</h6>
+            {{#each locations}}
+              {{#if name}}
+                <div class="item">
+                  - {{name}}
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+        {{/if}}
+        {{#if remoteFrequency}}
+          <div id="remote">
+            <h6 class="label">Remote Frequency</h6>
+            <span>{{remoteFrequency}}</span>
+          </div>
+        {{/if}}
+      </div>
+    </section>
+  </section>
+{{/resume.specific.dreamJob}}

@@ -402,6 +402,12 @@ section .location {
   overflow: hidden;
 }
 
+.informations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .gpa {
   clear: both;
   padding-bottom: 0.5em;
