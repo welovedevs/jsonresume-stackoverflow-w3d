@@ -36,20 +36,12 @@
 			</header>
 			{{/if}}
 
-			{{#location}}
+			{{#if location}}
 			<span class="location">
 				<span class="fas fa-map-marker-alt"></span>
-				{{#if city}}
-				<span class="city">{{city}},</span>
-				{{/if}}
-				{{#if countryCode}}
-				<span class="countryCode">({{countryCode}})</span>
-				{{/if}}
-				{{#if region}}
-				<span class="region">{{region}}</span>
-				{{/if}}
+				<span class="city">{{location}}</span>
 			</span>
-	    {{/location}}
+	    {{/if}}
 			{{#if website}}
     	<span class="website">
     		<a target="_blank" href="{{website}}">{{website}}</a>
