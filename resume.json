@@ -1,0 +1,216 @@
+{
+  "basics":{
+    "name":"Vincent Cotro",
+    "picture":"https://avataaar.welovedevs.com/png/?accessoriesType=Prescription02&clotheType=GraphicShirt&eyeType=Default&eyebrowType=DefaultNatural&facialHairColor=Blonde&facialHairType=BeardLight&hairColor=Blonde&mouthType=Default&skinColor=Pale&topType=ShortHairDreads02&clotheColor=W3D&graphicType=W3DLogo",
+    "title":"React developer",
+    "summary":"Developer Profile Demo",
+    "location":{
+      "locationCountryCode":"US",
+      "city":"San Francisco"
+    }
+  },
+  "work":[
+    {
+      "name":"Welovedevs",
+      "position":"React developer",
+      "index":0,
+      "startDate":"2019-10-01",
+      "summary":"Développement de la web app welovedevs.com ! ",
+      "location":"San Francisco, United States",
+      "placeId":"ChIJIQBpAG2ahYAR_6128GcTUEo",
+      "id":"-M2iXzW7SbU2oCYi0R-t"
+    },
+    {
+      "name":"Welovedevs.com",
+      "position":"Développeur React",
+      "index":1,
+      "startDate":"2016-06-01",
+      "endDate":"2019-07-01",
+      "summary":"Développeur de la plateforme welovedevs.com. Stack : react redux firebase ",
+      "location":"Lille, France",
+      "placeId":"ChIJEW4ls3nVwkcRYGNkgT7xCgQ",
+      "id":"-Lp-PvVzHI3q9S17ER3Z"
+    },
+    {
+      "name":"Altran",
+      "position":"Développeur iOS",
+      "index":2,
+      "startDate":"2009-12-01",
+      "endDate":"2012-11-01",
+      "summary":"Développeur mobile à la Mobile Factory",
+      "location":"Lille, France",
+      "placeId":"ChIJEW4ls3nVwkcRYGNkgT7xCgQ",
+      "id":"-LnCvXY_xgVAMYlLaMaL"
+    }
+  ],
+  "education":[
+    {
+      "id":"-LzkmrlXH69wHrsO5FRg",
+      "institution":"University of California, Berkeley",
+      "index":1,
+      "area":"Computer Science",
+      "studyType":"Engineer",
+      "endDate":"2020-01-01"
+    },
+    {
+      "id":"-LjvX6bpuJDIK1_IOk1b",
+      "institution":"ISEN Lille",
+      "area":"Informatique",
+      "studyType":"Ingénieur",
+      "endDate":"2019-01-01"
+    }
+  ],
+  "skills":[
+    {
+      "id":"85bfe2d6-68df-4f0f-8976-fef66f4b5e3f",
+      "name":"React",
+      "position":0,
+      "value":74
+    },
+    {
+      "id":"bc96d959-0cba-4792-adce-247257cd60ca",
+      "name":"AngularJS",
+      "position":1,
+      "value":50
+    },
+    {
+      "id":"2c69459d-8009-4bce-a20e-049ba2866931",
+      "name":"Android",
+      "position":2,
+      "value":70
+    },
+    {
+      "id":"70ba63b5-df30-4bca-b593-4616e2489d8f",
+      "name":"Behance",
+      "position":3,
+      "value":40
+    },
+    {
+      "id":"2f0bde73-594b-466a-b059-569f0d297f32",
+      "name":"Apache",
+      "position":4,
+      "value":50
+    },
+    {
+      "id":"83b96776-0747-4228-9abc-a6adcc676b60",
+      "name":"Dot-net",
+      "position":5,
+      "value":50
+    }
+  ],
+  "languages":[
+    {
+      "id":"-LjvX6bpuJDIK1_IOk1e",
+      "name":"English",
+      "position":0,
+      "value":90,
+      "language":"English"
+    },
+    {
+      "id":"-LjvX6bpuJDIK1_IOk1f",
+      "name":"Spanish",
+      "position":1,
+      "value":69,
+      "language":"Spanish"
+    },
+    {
+      "id":"2969fe91-e554-42c2-aaf0-2b8798aa327d",
+      "name":"French",
+      "position":2,
+      "value":100,
+      "language":"French"
+    }
+  ],
+  "interests":[
+    {
+      "gifUrl":"https://media2.giphy.com/media/l0HlDJBzZ1t2k8zgk/giphy-downsized.gif?cid=e3b0c4426f9b1cffebe41c00b5f3ccf7555589cbb16eb1e1&rid=giphy-downsized.gif",
+      "id":"1f82cb5d-1c9a-467f-b4ce-a3000d1fae77",
+      "index":0,
+      "name":"Mountain bike"
+    },
+    {
+      "gifUrl":"https://media1.giphy.com/media/2ASigm5DOFGcU/giphy.gif?cid=e3b0c442c6c9749c3cd0f49acdefae01664a6d2e7a678b33&rid=giphy.gif",
+      "id":"1e74f07a-bae4-4f55-9049-18caf4ed18b7",
+      "index":1,
+      "name":"Diving"
+    },
+    {
+      "gifUrl":"https://media2.giphy.com/media/4oMoIbIQrvCjm/giphy.gif?cid=e3b0c44282ca61b1acba3126e34e7649d21c543d6e331f55&rid=giphy.gif",
+      "id":"f874a4c9-dd67-4db3-bf37-15bd2bbf716b",
+      "index":2,
+      "name":"Music"
+    },
+    {
+      "id":"a84cffcf-3775-43cf-b334-672103f7645a",
+      "index":3,
+      "name":"Je suis passionné par l'IOT"
+    }
+  ],
+  "projects":[
+    {
+      "date":{
+        "month":2,
+        "year":2020
+      },
+      "description":"react-ultimate-resume is an open-source customizable software developer resume to highlight your skills and experiences.\n\nDiscover a modern approach of the traditionnal CV that includes animations and latest front-end technologies. Impress recruiters or customers with your projects, hobbies and experiences as never before.\n\nWe used JSON Resume, a community driven open source initiative to create a JSON based standard for resumes. Discover the official schema here. We added a few extra-fields to JSON Resume standard to fit developers needs. Learn more about them here.\n\nThis app is built using the popular create-react-app. You will find a lot of resources to understand how to edit and publish your resume directly on https://create-react-app.dev/",
+      "id":"0acea9f3-857b-4677-8896-a700ad873977",
+      "link":"https://github.com/welovedevs/react-ultimate-resume",
+      "name":"React Ultimate Resume",
+      "endDate":"2020-03-01"
+    }
+  ],
+  "specific":{
+    "basics":{
+      "visaSponsorship":true,
+      "personalDescription":"🧰 Si vous me voyez nous avons vérifié le fonctionnement d'une fonctionnalité    !"
+    },
+    "dreamJob":{
+      "locations":[
+        {
+          "id":"ChIJOwg_06VPwokRYv534QaPC8g",
+          "index":1,
+          "placeId":"ChIJOwg_06VPwokRYv534QaPC8g",
+          "name":"New York, United States"
+        },
+        {
+          "id":"ChIJP3Sa8ziYEmsRUKgyFmh9AQM",
+          "index":2,
+          "placeId":"ChIJP3Sa8ziYEmsRUKgyFmh9AQM",
+          "name":"Australia"
+        },
+        {
+          "id":"ChIJVXealLU_xkcRja_At0z9AGY",
+          "index":2,
+          "placeId":"ChIJVXealLU_xkcRja_At0z9AGY",
+          "name":"Amsterdam, Netherlands"
+        }
+      ],
+      "salary":"50",
+      "perks":{
+        "challenge":true,
+        "responsabilities":true,
+        "work_hours":true
+      },
+      "remoteFrequency":"occasionally"
+    },
+    "currentJob":{
+
+    },
+    "education":{
+      "studiesLevel":5
+    },
+    "work":{
+      "contractTypes":[
+        "permanent"
+      ],
+      "codingYears":8,
+      "codingReason":"J'ai commencé à coder en autodidacte sur open classroom ! ",
+      "searchState":"notSearching",
+      "experienceYears":4
+    },
+    "sound":{
+      "embedUrl":"https://open.spotify.com/embed/playlist/37i9dQZF1DWZa8CSUr0hCY?si=MqL95DbxSeW2OZ7GC5OhZw"
+    },
+    "interestedBy":"Python, Angular & Scala"
+  }
+}
