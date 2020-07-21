@@ -1,23 +1,34 @@
 {{#if resume.skills.length}}
-<section class="section">
-	<header>
-		<h2 class='section-title'>Skills</h2>
-	</header>
-	<section id="skills">
-		{{#each resume.skills}}
-		<div class="item">
-			{{#if name}}
-			<h3 class="name">
-				{{name}}
-			</h3>
-			{{/if}} {{#if value}}
-			<div class="level {{getLevel value}}">
-				<em>{{value}} %</em>
-				<div class="bar"></div>
-			</div>
-			{{/if}}
-		</div>
-		{{/each}}
-	</section>
-</section>
+  <section class="section">
+    <header>
+      <h2 class='section-title'>COMPÉTENCES </h2>
+    </header>
+    <section id="skills">
+      {{#each resume.skills}}
+        <div class="item">
+          {{#if name}}
+            <h3 class="name">
+              {{name}}
+            </h3>
+          {{/if}} {{#if value}}
+          <div class="level {{getLevel value}}">
+            <em>{{value}} %</em>
+            <div class="bar"></div>
+          </div>
+        {{/if}}
+        </div>
+      {{/each}}
+
+    </section>
+    {{#resume.specific}}
+      <section id="other">
+        {{#if work.codingYears}}
+          <div id="code-since">Je code depuis {{work.codingYears}} an(s)</div>
+        {{/if}}
+        {{#if interestedBy}}
+          <div id="interested-by">Intéressé(e) par {{interestedBy}}</div>
+        {{/if}}
+      </section>
+    {{/resume.specific}}
+  </section>
 {{/if}}

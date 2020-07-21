@@ -203,6 +203,14 @@ strong {
   margin-bottom: 1rem;
 }
 
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
 section .location {
   margin-right: 0.5em;
   color: #606d76;
@@ -215,6 +223,10 @@ section .location {
 
 #profiles .item {
   padding: 0;
+}
+
+#work-years {
+  margin-bottom: 1em;
 }
 
 #header > #profiles,
@@ -266,6 +278,10 @@ section .location {
 }
 
 .main-summary p {
+  margin: 0;
+}
+
+.main-description p {
   margin: 0;
 }
 
@@ -392,6 +408,10 @@ section .location {
 
 .highlights {
   margin: 1em 0 0 0;
+}
+
+#code-since {
+  font-weight: bold !important;
 }
 
 .highlights > li > p {
@@ -776,9 +796,6 @@ section .location {
   .level em {
     font-style: normal;
     padding: 0.1em 0;
-  }
-  .level .bar {
-    display: none;
   }
   #profiles .item {
     padding: 0;
