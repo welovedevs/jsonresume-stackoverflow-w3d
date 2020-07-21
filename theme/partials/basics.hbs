@@ -33,10 +33,18 @@
 		</span>
     {{/resume.basics.location}}
 
-    {{#if resume.specific.basics.visaSponsorship}}
-      <div class="area">| J'ai besoin d'un visa</div>
+    {{#if resume.specific.work.contractTypes.length}}
+      <span id="contract">| Je recherche un
+        {{#each resume.specific.work.contractTypes}}
+          <span>{{getW3DWord .}},</span>
+        {{/each}}
+      </span>
     {{/if}}
 
+
+    {{#if resume.specific.basics.visaSponsorship}}
+      <span class="area">J'ai besoin d'un visa</span>
+    {{/if}}
 
     {{#resume.basics}}
       <div id="contact">
@@ -67,7 +75,7 @@
           <span class="fab fa-spotify"></span>
           {{#if resume.specific.sound.embedUrl}}
             <span class="url">
-						<a target="_blank" href="{{resume.specific.sound.embedUrl}}">Ma playlist de dingue</a>
+						<a target="_blank" href="{{resume.specific.sound.embedUrl}}">Ma playlist Spotify</a>
 					</span>
           {{/if}}
         </div>

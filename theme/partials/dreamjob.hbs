@@ -23,10 +23,22 @@
             {{/each}}
           </div>
         {{/if}}
+
+        {{#if perks}}
+          <div id="perks">
+            <h6 class="label">Ce que j'aimerais</h6>
+            {{#each perks}}
+                <div class="item">
+                  - {{getW3DWord @key}}
+                </div>
+            {{/each}}
+          </div>
+        {{/if}}
+
         {{#if remoteFrequency}}
           <div id="remote">
             <h6 class="label">Fréquence travail à distance</h6>
-            <span>{{remoteFrequency}}</span>
+            <span>{{getW3DWord remoteFrequency}}</span>
           </div>
         {{/if}}
       </div>
