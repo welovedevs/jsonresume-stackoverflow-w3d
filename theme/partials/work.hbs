@@ -49,12 +49,13 @@
             </header>
           {{/if}}
 
-          {{#if location.city}}
+          {{#if location}}
             <span class="location">
               <span class="fas fa-map-marker-alt"></span>
-              <span class="city">{{location.city}}</span>
+              <span class="city">{{location}}</span>
             </span>
           {{/if}}
+          
           {{#if website}}
             <span class="website">
     		<a target="_blank" href="{{website}}">{{website}}</a>
