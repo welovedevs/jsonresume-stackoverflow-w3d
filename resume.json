@@ -3,6 +3,8 @@
     "name":"Vincent Cotro",
     "picture":"https://avataaar.welovedevs.com/png/?accessoriesType=Prescription02&clotheType=GraphicShirt&eyeType=Default&eyebrowType=DefaultNatural&facialHairColor=Blonde&facialHairType=BeardLight&hairColor=Blonde&mouthType=Default&skinColor=Pale&topType=ShortHairDreads02&clotheColor=W3D&graphicType=W3DLogo",
     "title":"React developer",
+    "email": "test@hotmail.fr",
+    "phone": "0684654366",
     "summary":"Developer Profile Demo",
     "location":{
       "locationCountryCode":"US",
@@ -27,7 +29,9 @@
       "startDate":"2016-06-01",
       "endDate":"2019-07-01",
       "summary":"Développeur de la plateforme welovedevs.com. Stack : react redux firebase ",
-      "location":"Lille, France",
+      "location": {
+        "city": "Lille"
+      },
       "placeId":"ChIJEW4ls3nVwkcRYGNkgT7xCgQ",
       "id":"-Lp-PvVzHI3q9S17ER3Z"
     },
@@ -65,7 +69,8 @@
       "id":"85bfe2d6-68df-4f0f-8976-fef66f4b5e3f",
       "name":"React",
       "position":0,
-      "value":74
+      "value":74,
+      "keywords": ["1","2","3"]
     },
     {
       "id":"bc96d959-0cba-4792-adce-247257cd60ca",
@@ -201,12 +206,14 @@
     },
     "work":{
       "contractTypes":[
-        "permanent"
+        "permanent", "fixedTerm"
       ],
       "codingYears":8,
       "codingReason":"J'ai commencé à coder en autodidacte sur open classroom ! ",
       "searchState":"notSearching",
-      "experienceYears":4
+      "experienceYears":4,
+      "codeExperienceYears": 6,
+      "otherExperienceYears": 3
     },
     "sound":{
       "embedUrl":"https://open.spotify.com/embed/playlist/37i9dQZF1DWZa8CSUr0hCY?si=MqL95DbxSeW2OZ7GC5OhZw"

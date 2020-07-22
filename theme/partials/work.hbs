@@ -11,7 +11,9 @@
           </div>
         {{/if}}
         {{#if otherExperienceYears}}
-          <div id="other-experience">{{otherExperienceYears}} année(s) d'expérience professionnelle en dehors du métier de développeur.</div>
+          <div id="other-experience">{{otherExperienceYears}} année(s) d'expérience professionnelle en dehors du métier
+            de développeur.
+          </div>
         {{/if}}
       </section>
     {{/resume.specific.work}}
@@ -47,16 +49,16 @@
             </header>
           {{/if}}
 
-          {{#if location}}
+          {{#if location.city}}
             <span class="location">
-				<span class="fas fa-map-marker-alt"></span>
-				<span class="city">{{location}}</span>
-			</span>
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="city">{{location.city}}</span>
+            </span>
           {{/if}}
           {{#if website}}
             <span class="website">
     		<a target="_blank" href="{{website}}">{{website}}</a>
-    	</span> {{/if}} {{#if keywords.length}}
+    	    </span> {{/if}} {{#if keywords.length}}
           <ul class="keywords">
             {{#each keywords}}
               <li>{{.}}</li>
