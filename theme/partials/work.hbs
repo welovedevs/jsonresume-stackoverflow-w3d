@@ -20,7 +20,7 @@
     <section id="work">
       {{#each resume.work}}
         <section class="work-item">
-          {{#if name}}
+          {{#if position}}
 
             {{#if summary}}
               {{#if @first}}
@@ -39,11 +39,11 @@
               <div class="date">
                 {{#if startDate}}
                   <span class="startDate">{{MY startDate}}</span>
-                {{/if}}
-                {{#if endDate}}
-                  <span class="endDate">- {{MY endDate}}</span>
-                {{else}}
-                  <span class="endDate">- Current</span>
+                  {{#if endDate}}
+                    <span class="endDate">- {{MY endDate}}</span>
+                  {{else}}
+                    <span class="endDate">- Aujourd'hui</span>
+                  {{/if}}
                 {{/if}}
               </div>
             </header>
