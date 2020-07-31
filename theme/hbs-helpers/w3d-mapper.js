@@ -5,6 +5,7 @@ const W3DWordsInFrench = {
   apprenticeship: 'Apprentissage',
   freelance: 'freelance',
   always: 'Télétravail temps complet',
+  fullTime: 'Télétravail temps complet',
   regularly: 'Télétravail régulier',
   occasionally: 'Télétravail occasionnel',
   never: 'Pas de télétravail',
@@ -19,6 +20,7 @@ const W3DWordsInFrench = {
 };
 
 const getW3DWord = (word) => {
+  console.log('word', word)
   return W3DWordsInFrench[word];
 };
 

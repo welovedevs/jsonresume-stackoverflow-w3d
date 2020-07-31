@@ -15,9 +15,29 @@
 
     {{#resume.basics.location}}
       <span class="location">
-			{{#if address}}
-        <span class="address">{{address}},</span>
+      {{#if address}}
+        <span class="fa fa-map-marker"></span>
+      {{else}}
+        {{#if postalCode}}
+          <span class="fa fa-map-marker"></span>
+        {{else}}
+          {{#if city}}
+            <span class="fa fa-map-marker"></span>
+          {{else}}
+            {{#if region}}
+              <span class="fa fa-map-marker"></span>
+            {{else}}
+              {{#if locationCountryCode}}
+                <span class="fa fa-map-marker"></span>
+              {{else}}
+              {{/if}}
+            {{/if}}
+          {{/if}}
+        {{/if}}
       {{/if}}
+        {{#if address}}
+          <span class="address">{{address}},</span>
+        {{/if}}
         {{#if postalCode}}
           <span class="postalCode">{{postalCode}},</span>
         {{/if}}
@@ -30,15 +50,44 @@
         {{#if locationCountryCode}}
           <span class="countryCode">{{locationCountryCode}}</span>
         {{/if}}
+
+        {{#if address}}
+          <span>| </span>
+        {{else}}
+          {{#if postalCode}}
+            <span>| </span>
+          {{else}}
+            {{#if city}}
+              <span>| </span>
+            {{else}}
+              {{#if region}}
+                <span>| </span>
+              {{else}}
+                {{#if locationCountryCode}}
+                  <span>| </span>
+                {{else}}
+                {{/if}}
+              {{/if}}
+            {{/if}}
+          {{/if}}
+        {{/if}}
 		</span>
     {{/resume.basics.location}}
 
     {{#if resume.specific.work.contractTypes.length}}
-      <span id="contract">| Je recherche un
-        {{#each resume.specific.work.contractTypes}}
-          - <span>{{getW3DWord .}}</span>
-        {{/each}}
-      </span>
+      {{#ifCond resume.specific.work.contractTypes.length '>' 1}}
+        <span id="contract">Contrats recherchés :</span>
+      {{else}}
+        <span id="contract">Contrat recherché :</span>
+      {{/ifCond}}
+
+      {{#each resume.specific.work.contractTypes}}
+        {{#ifCond ../resume.specific.work.contractTypes.length '-==' @index }}
+          <span>{{getW3DWord ..}}</span>
+        {{else}}
+          <span>{{getW3DWord ..}},</span>
+        {{/ifCond}}
+      {{/each}}
     {{/if}}
 
 
@@ -94,5 +143,8 @@
       </section>
     </section>
   {{/if}}
+
+  {{! Do not remove paddingBottom (used on web app) }}
+  <div class="paddingBottom"/>
 {{/if}}
 
