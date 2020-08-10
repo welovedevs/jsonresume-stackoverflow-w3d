@@ -20,7 +20,10 @@
     <section id="work">
       {{#if resume.specific.isFree}}
         <div id="restricted">
-          Cette section n'est pas disponible sans abonnement. <a target="_blank" href="{{resume.specific.profileLink}}">Rendez-vous sur le profil du candidat pour découvrir ses expériences.</a>
+          Cette section n'est pas disponible sans abonnement.
+          {{#if resume.specific.profileLink}}
+            <a target="_blank" href="{{resume.specific.profileLink}}">Rendez-vous sur le profil du candidat pour
+              découvrir ses expériences.</a>{{/if}}
         </div>
       {{else}}
         {{#each resume.work}}
