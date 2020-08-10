@@ -165,6 +165,8 @@
     }
   ],
   "specific":{
+    "isFree": true,
+    "profileLink": "https://google.fr",
     "basics":{
       "visaSponsorship":true,
       "personalDescription":"🧰 Si vous me voyez nous avons vérifié le fonctionnement d'une fonctionnalité    !"

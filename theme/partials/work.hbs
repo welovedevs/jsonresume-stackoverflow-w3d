@@ -18,68 +18,74 @@
       </section>
     {{/resume.specific.work}}
     <section id="work">
-      {{#each resume.work}}
-        <section class="work-item">
-          {{#if position}}
+      {{#if resume.specific.isFree}}
+        <div id="restricted">
+          Cette section n'est pas disponible sans abonnement. <a target="_blank" href="{{resume.specific.profileLink}}">Rendez-vous sur le profil du candidat pour découvrir ses expériences.</a>
+        </div>
+      {{else}}
+        {{#each resume.work}}
+          <section class="work-item">
+            {{#if position}}
 
-            {{#if summary}}
-              {{#if @first}}
-                <input id="work-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked"/>
-              {{else}}
-                <input id="work-item-{{@index}}" type="checkbox" class="toggle-item"/>
+              {{#if summary}}
+                {{#if @first}}
+                  <input id="work-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked"/>
+                {{else}}
+                  <input id="work-item-{{@index}}" type="checkbox" class="toggle-item"/>
+                {{/if}}
+                <label for="work-item-{{@index}}"></label>
               {{/if}}
-              <label for="work-item-{{@index}}"></label>
+
+              <header class="clear">
+                {{#if position}}
+                  <div class="position">{{position}}</div>
+                {{/if}}
+                <div class="company">{{name}}</div>
+                <div class="date">
+                  {{#if startDate}}
+                    <span class="startDate">{{MY startDate}} - </span>
+                    {{#if endDate}}
+                      <span class="endDate">{{MY endDate}}</span>
+                    {{else}}
+                      <span class="endDate">Aujourd'hui</span>
+                    {{/if}}
+                  {{/if}}
+                </div>
+              </header>
             {{/if}}
 
-            <header class="clear">
-              {{#if position}}
-                <div class="position">{{position}}</div>
-              {{/if}}
-              <div class="company">{{name}}</div>
-              <div class="date">
-                {{#if startDate}}
-                  <span class="startDate">{{MY startDate}}</span>
-                  {{#if endDate}}
-                    <span class="endDate">- {{MY endDate}}</span>
-                  {{else}}
-                    <span class="endDate">- Aujourd'hui</span>
-                  {{/if}}
-                {{/if}}
-              </div>
-            </header>
-          {{/if}}
-
-          {{#if location}}
-            <span class="location">
+            {{#if location}}
+              <span class="location">
               <span class="fas fa-map-marker-alt"></span>
               <span class="city">{{location}}</span>
             </span>
-          {{/if}}
+            {{/if}}
 
-          {{#if website}}
-            <span class="website">
+            {{#if website}}
+              <span class="website">
     		<a target="_blank" href="{{website}}">{{website}}</a>
     	    </span> {{/if}} {{#if keywords.length}}
-          <ul class="keywords">
-            {{#each keywords}}
-              <li>{{.}}</li>
-            {{/each}}
-          </ul>
-        {{/if}}
-          <div class="item" id="work-item">
-            {{#if summary}}
-              <div class="summary">{{paragraphSplit summary}}</div>
-            {{/if}}
-            {{#if highlights.length}}
-              <ul class="highlights">
-                {{#each highlights}}
-                  <li>{{paragraphSplit .}}</li>
-                {{/each}}
-              </ul>
-            {{/if}}
-          </div>
-        </section>
-      {{/each}}
+            <ul class="keywords">
+              {{#each keywords}}
+                <li>{{.}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+            <div class="item" id="work-item">
+              {{#if summary}}
+                <div class="summary">{{paragraphSplit summary}}</div>
+              {{/if}}
+              {{#if highlights.length}}
+                <ul class="highlights">
+                  {{#each highlights}}
+                    <li>{{paragraphSplit .}}</li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </div>
+          </section>
+        {{/each}}
+      {{/if}}
     </section>
   </section>
 {{/if}}

@@ -808,3 +808,8 @@ section .location {
     padding-left: 0.1em;
   }
 }
+
+#restricted {
+  font-weight: bold;
+  padding: 40px 0px;
+}
