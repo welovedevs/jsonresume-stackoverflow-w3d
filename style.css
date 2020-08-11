@@ -813,3 +813,24 @@ section .location {
   font-weight: bold;
   padding: 40px 0px;
 }
+
+#banner {
+  height: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #220bab;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+#banner-image {
+  object-fit: contain;
+  padding: 0px 20px;
+}
+
+#credits {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+}

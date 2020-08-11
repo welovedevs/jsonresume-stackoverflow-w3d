@@ -1,5 +1,11 @@
 {{#if resume.basics}}
   <header id="header" class="clear">
+    {{#if resume.specific.profileLink}}
+      <div id="banner">
+        <img id="banner-image" class="image" src="https://cdn.filestackcontent.com/compress/NNJDBzkVQiGxJ1bgwhBW"
+             alt="logo"/>
+      </div>
+    {{/if}}
     {{#if resume.basics.picture}}
       <img class="image" src="{{resume.basics.picture}}" alt="{{resume.basics.name}}"/>
       <div class="middle">
@@ -95,41 +101,47 @@
       <span class="area">| J'ai besoin d'un visa</span>
     {{/if}}
 
-    {{#resume.basics}}
+    {{#resume}}
       <div id="contact">
-        {{#if website}}
+        {{#if specific.profileLink}}
+          <div class="username">
+            <span class="far fa-id-card"></span>
+            <span class="url">
+						<a target="_blank" href="{{specific.profileLink}}">Profil WeLoveDevs</a>
+					</span>
+          </div>
+        {{/if}}
+        {{#if basics.website}}
           <div class="website">
             <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" target="_blank" href="{{website}}">{{website}}</a>
+            <a target="_blank" target="_blank" href="{{basics.website}}">{{basics.website}}</a>
           </div>
         {{/if}}
-        {{#if email}}
+        {{#if basics.email}}
           <div class="email">
             <span class="far fa-envelope"></span>
-            <a href="mailto:{{email}}">{{email}}</a>
+            <a href="mailto:{{basics.email}}">{{basics.email}}</a>
           </div>
         {{/if}}
-        {{#if phone}}
+        {{#if basics.phone}}
           <div class="phone">
             <span class="fas fa-mobile-alt"></span>
-            <a href="tel:{{phone}}">{{phone}}</a>
+            <a href="tel:{{basics.phone}}">{{basics.phone}}</a>
+          </div>
+        {{/if}}
+        {{#if specific.sound.embedUrl}}
+          <div class="username">
+            <span class="fab fa-spotify"></span>
+            {{#if specific.sound.embedUrl}}
+              <span class="url">
+						<a target="_blank" href="{{specific.sound.embedUrl}}">Ma playlist Spotify</a>
+					</span>
+            {{/if}}
           </div>
         {{/if}}
       </div>
-    {{/resume.basics}}
+    {{/resume}}
 
-    {{#if resume.specific.sound.embedUrl}}
-      <div id="profiles">
-        <div class="username">
-          <span class="fab fa-spotify"></span>
-          {{#if resume.specific.sound.embedUrl}}
-            <span class="url">
-						<a target="_blank" href="{{resume.specific.sound.embedUrl}}">Ma playlist Spotify</a>
-					</span>
-          {{/if}}
-        </div>
-      </div>
-    {{/if}}
 
     {{#if resume.specific.basics.personalDescription}}
       <div class="description mt-1">{{paragraphSplit resume.specific.basics.personalDescription}}</div>
