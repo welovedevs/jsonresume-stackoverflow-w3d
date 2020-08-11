@@ -834,3 +834,7 @@ section .location {
   font-size: 15px;
   font-weight: bold;
 }
+
+.emoji {
+  max-height: 14px;
+}

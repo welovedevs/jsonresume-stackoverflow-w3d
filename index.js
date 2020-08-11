@@ -2,6 +2,7 @@ const Handlebars = require('handlebars');
 const { readFileSync, readdirSync } = require('fs');
 const { join } = require('path');
 
+const twemoji = require('twemoji')
 const HELPERS = join(__dirname, 'theme/hbs-helpers');
 
 const { birthDate } = require(join(HELPERS, 'birth-date.js'));
@@ -42,10 +43,10 @@ function render(resume) {
     Handlebars.registerPartial(name, template);
   });
 
-  return Handlebars.compile(tpl)({
+  return twemoji.parse(Handlebars.compile(tpl)({
     css,
     resume,
-  });
+  }), { size: "36x36"});
 }
 
 module.exports = { render };
