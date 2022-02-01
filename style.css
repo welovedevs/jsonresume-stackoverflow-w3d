@@ -232,8 +232,11 @@ section .location {
 #header > #profiles,
 #header > #contact,
 #skills,
+#tests,
+#likes,
 #languages,
-#interests {
+#interests,
+#tests {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -270,6 +273,11 @@ section .location {
   float: right;
   border-radius: 4px;
 }
+
+#other.since {
+  padding-bottom: 8px;
+}
+
 
 .main-summary {
   background: #f1f8ff;
@@ -522,19 +530,25 @@ section .location {
 }
 
 #languages .item,
-#skills .item,
-#interests .item {
+#tests .item {
   width: 15em;
   padding: 0 0.5em 0.5em 0;
   border-bottom: none;
 }
 
-#skills .item {
+#interests .item,
+#likes .item .name {
+  margin-right: 10px;
+  font-weight: 500;
+}
+#tests .item {
   width: 16em;
 }
-
-#skills .item .keywords {
-  width: 15em;
+#skills .item {
+  margin-right: 10px;
+}
+#skills .item .name {
+  font-weight: 600;
 }
 
 /* Skill chart */
@@ -769,7 +783,7 @@ section .location {
     font-size: 0.8rem;
     font-weight: 600;
   }
-  #skills .item {
+  #tests .item {
     width: calc(100% / 3);
     padding: 0;
   }
@@ -779,9 +793,7 @@ section .location {
   ul.keywords::before {
     content: "Skills acquired: ";
   }
-  #skills .keywords::before {
-    content: none;
-  }
+
   .section p {
     margin: 0;
     padding: 0;

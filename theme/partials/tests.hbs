@@ -1,0 +1,24 @@
+{{#if resume.tests.length}}
+  <section class="section">
+    <header>
+      <h2 class='section-title'>TESTS TECHNIQUES</h2>
+    </header>
+    <section id="tests">
+      {{#each resume.tests}}
+        <div class="item">
+          {{#if name}}
+            <h3 class="name">
+              {{name}}
+            </h3>
+          {{/if}} {{#if centile}}
+          <div class="level {{getTestLevel value}}">
+            <em>Top {{value}} %</em>
+            <div class="bar"></div>
+          </div>
+        {{/if}}
+        </div>
+      {{/each}}
+
+    </section>
+  </section>
+{{/if}}

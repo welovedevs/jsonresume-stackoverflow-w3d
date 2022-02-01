@@ -1,0 +1,25 @@
+{{#if resume.likes.companiesLength}}
+  <section class="section">
+    <header>
+      <h2 class='section-title'>Likes</h2>
+    </header>
+    <section id="likes">
+      {{#each resume.likes.selectedCompanies}}
+        <div class="item">
+          {{#if companyName}}
+            <h6 class="name">
+              {{companyName}}{{#unless @last}},{{/unless}}
+            </h6>
+          {{/if}}
+        </div>
+      {{/each}}
+      {{#if resume.likes.companiesLeft}}
+        <div class="item">
+          <h6 class="name">
+            et {{resume.likes.companiesLeft}} autres entreprises
+          </h6>
+        </div>
+      {{/if}}
+    </section>
+  </section>
+{{/if}}

@@ -7,9 +7,9 @@
     {{#each resume.interests}}
     <div class="item">
       {{#if name}}
-      <h3 class="name">
-        {{name}}
-      </h3>
+        <h6 class="name">
+          {{name}}{{#unless @last}},{{/unless}}
+        </h6>
       {{/if}}
       {{#if keywords.length}}
       <ul class="keywords">
