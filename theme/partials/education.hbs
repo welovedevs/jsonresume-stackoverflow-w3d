@@ -4,51 +4,46 @@
     <h2 class='section-title'>FORMATIONS <span class="item-count">({{resume.education.length}})</span></h2>
   </header>
 
-  <section id="education">
-    {{#if resume.specific.education.studiesLevel}}
-      <div class="mb-1">{{resume.specific.education.studiesLevel}} année(s) d'études.</div>
-    {{/if}}
-    {{#each resume.education}}
-    <section class="education-item">
-      {{#if summary}}
-        {{#if @first}}
-        <input id="education-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
-        {{else}}
-        <input id="education-item-{{@index}}" type="checkbox" class="toggle-item" />
-        {{/if}}
-        <label for="education-item-{{@index}}"></label>
+    <section id="education">
+      {{#if resume.specific.education.studiesLevel}}
+        <div class="mb-1">{{resume.specific.education.studiesLevel}} année(s) d'études.</div>
       {{/if}}
-      <header class="clear">
-        <div class="header-left">
-          {{#if studyType}}
-          <div class="studyType">
-            {{studyType}}
-          </div>
+      {{#each resume.education}}
+        <section class="education-item">
+          {{#if summary}}
+            <label for="education-item-{{@index}}"></label>
           {{/if}}
-          {{#if area}}
-          <div class="area">
-            {{area}}
-          </div>
-          {{/if}}
-          {{#if institution}}
-          <div class="institution">
-            {{institution}}
-          </div>
-          {{/if}}
-        </div>
-        <div class="date">
-          {{#if startDate}}
-          <span class="startDate">
-          {{Y startDate}} -
+          <header class="clear">
+            <div class="header-left">
+              {{#if studyType}}
+                <div class="studyType">
+                  {{studyType}}
+                </div>
+              {{/if}}
+              {{#if area}}
+                <div class="area">
+                  {{area}}
+                </div>
+              {{/if}}
+              {{#if institution}}
+                <div class="institution">
+                  {{institution}}
+                </div>
+              {{/if}}
+            </div>
+            <div class="date">
+              {{#if startDate}}
+                <span class="startDate">
+                  {{Y startDate}}
+                </span>
+              {{/if}}
+              {{#if endDate}}
+                <span class="endDate">
+          - {{Y endDate}}
           </span>
-          {{/if}}
-          {{#if endDate}}
-          <span class="endDate">
-          {{Y endDate}}
-          </span>
-          {{else}}
-          <span class="endDate">
-          Aujourd'hui
+              {{else}}
+                <span class="endDate">
+          - Aujourd'hui
           </span>
           {{/if}}
         </div>

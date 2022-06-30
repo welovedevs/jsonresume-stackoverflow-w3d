@@ -3,35 +3,30 @@
     <header>
       <h2 class='section-title'>COMPÉTENCES </h2>
     </header>
-    {{#resume.specific}}
-      {{#if work.codingYears}}
-        <section id="other" class="since">
-          <div id="code-since">Je code depuis {{work.codingYears}} an(s)</div>
-        </section>
-      {{/if}}
-    {{/resume.specific}}
     <section id="skills">
-      <div class="item">
-        Technos principales :
-      </div>
       {{#each resume.skills}}
         <div class="item">
           {{#if name}}
-            <h6 class="name">
-              {{name}}{{#unless @last}},{{/unless}}
-            </h6>
-          {{/if}}
+            <h3 class="name">
+              {{name}}
+            </h3>
+          {{/if}} {{#if value}}
+          <div class="level {{getLevel value}}">
+            <em>{{value}} %</em>
+            <div class="bar"></div>
+          </div>
+        {{/if}}
         </div>
       {{/each}}
 
     </section>
     {{#resume.specific}}
       <section id="other">
-        {{#if interestedBy}}
-          <div id="interested-by">Intéressé(e) également par {{interestedBy}}</div>
+        {{#if work.codingYears}}
+          <div id="code-since">Je code depuis {{work.codingYears}} an(s)</div>
         {{/if}}
-        {{#if work.codingReason}}
-          <div id="code-started">{{work.codingReason}}</div>
+        {{#if interestedBy}}
+          <div id="interested-by">Intéressé(e) par {{interestedBy}}</div>
         {{/if}}
       </section>
     {{/resume.specific}}

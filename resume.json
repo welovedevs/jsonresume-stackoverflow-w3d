@@ -9,7 +9,29 @@
     "location":{
       "locationCountryCode":"US",
       "city":"San Francisco"
-    }
+    },
+    "profiles": [
+      {
+        "id": "0d38dabe-8289-4caa-a45d-6f3e8ab0e9d2",
+        "network": "linkedin",
+        "url": "https://www.linkedin.com/in/%F0%9F%A5%B3-cl%C3%A9ment-devos-4b832526/"
+      },
+      {
+        "id": "66144afe-1492-4611-b789-dfd32c767b64",
+        "network": "codingame",
+        "username": "ed3ee82f9630e99db32dec093b2ca07a0368002"
+      },
+      {
+        "id": "8df35951-069e-4d7a-9e5c-42c164683342",
+        "network": "github",
+        "username": "clementdevos"
+      },
+      {
+        "id": "a2d98a35-f73b-433c-874b-8fe48c6249c4",
+        "network": "twitter",
+        "username": "clementdevos"
+      }
+    ]
   },
   "work":[
     {
