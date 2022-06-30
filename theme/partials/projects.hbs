@@ -6,6 +6,10 @@
     <section id="projects">
       {{#each resume.projects}}
         <section class="project-item">
+          {{#if summary}}
+            <label for="project-item-{{@index}}"></label>
+          {{/if}}
+
           {{#if name}}
             <header class="clear">
               {{#if name}}
@@ -25,7 +29,7 @@
           {{/if}}
           {{#location}}
             <span class="location">
-      <span class="fas fa-map-marker-alt"></span>
+              <span class="fas fa-map-marker-alt"></span>
               {{#if city}}
                 <span class="city">{{city}},</span>
               {{/if}}
@@ -37,13 +41,20 @@
                   {{region}}
                 </span>
               {{/if}}
-      </span>
+            </span>
           {{/location}}
           {{#if url}}
             <span class="website">
-        <a target="_blank" href="{{url}}">{{url}}</a>
-      </span>
+              <span class="fas fa-external-link-alt"></span>
+              <a target="_blank" href="{{url}}">{{url}}</a>
+            </span>
           {{/if}}
+          {{#if link}}
+          <span class="website">
+              <span class="fas fa-external-link-alt"></span>
+              <a target="_blank" href="{{link}}">{{link}}</a>
+            </span>
+        {{/if}}
           <div class="item">
             {{#if description}}
               <div class="summary">{{paragraphSplit description}}</div>
