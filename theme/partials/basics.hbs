@@ -13,11 +13,31 @@
       </div>
     {{/if}}
 
-    {{#location}}
+    {{#resume.basics.location}}
       <span class="location">
-			{{#if address}}
-        <span class="address">{{address}},</span>
+      {{#if address}}
+        <span class="fa fa-map-marker"></span>
+      {{else}}
+        {{#if postalCode}}
+          <span class="fa fa-map-marker"></span>
+        {{else}}
+          {{#if city}}
+            <span class="fa fa-map-marker"></span>
+          {{else}}
+            {{#if region}}
+              <span class="fa fa-map-marker"></span>
+            {{else}}
+              {{#if locationCountryCode}}
+                <span class="fa fa-map-marker"></span>
+              {{else}}
+              {{/if}}
+            {{/if}}
+          {{/if}}
+        {{/if}}
       {{/if}}
+        {{#if address}}
+          <span class="address">{{address}},</span>
+        {{/if}}
         {{#if postalCode}}
           <span class="postalCode">{{postalCode}},</span>
         {{/if}}
@@ -27,14 +47,32 @@
         {{#if region}}
           <span class="region">{{region}}</span>
         {{/if}}
-        {{#if countryCode}}
-          <span class="countryCode">{{countryCode}}</span>
+        {{#if locationCountryCode}}
+          <span class="countryCode">{{locationCountryCode}}</span>
+        {{/if}}
+
+        {{#if address}}
+          <span>| </span>
+        {{else}}
+          {{#if postalCode}}
+            <span>| </span>
+          {{else}}
+            {{#if city}}
+              <span>| </span>
+            {{else}}
+              {{#if region}}
+                <span>| </span>
+              {{else}}
+                {{#if locationCountryCode}}
+                  <span>| </span>
+                {{else}}
+                {{/if}}
+              {{/if}}
+            {{/if}}
+          {{/if}}
         {{/if}}
 		</span>
-    {{/location}}
-
-    {{#birthDate birth}}
-    {{/birthDate}}
+    {{/resume.basics.location}}
 
     {{#if resume.specific.work.contractTypes.length}}
       {{#ifCond resume.specific.work.contractTypes.length '>' 1}}
@@ -52,60 +90,70 @@
       {{/each}}
     {{/if}}
 
-    <div id="contact">
-      {{#if website}}
-        <div class="website">
-          <span class="fas fa-external-link-alt"></span>
-          <a class="hide-href-print" target="_blank" target="_blank" href="{{website}}">{{website}}</a>
-        </div>
-      {{/if}}
-      {{#if email}}
-        <div class="email">
-          <span class="far fa-envelope"></span>
-          <a class="hide-href-print" href="mailto:{{email}}">{{email}}</a>
-        </div>
-      {{/if}}
-      {{#if phone}}
-        <div class="phone">
-          <span class="fas fa-mobile-alt"></span>
-          <a class="hide-href-print" href="tel:{{phone}}">{{phone}}</a>
-        </div>
-      {{/if}}
-    </div>
 
     {{#if resume.specific.basics.visaSponsorship}}
       <span class="area">| J'ai besoin d'un visa</span>
     {{/if}}
 
+    {{#resume.basics}}
+      <div id="contact">
+        {{#if website}}
+          <div class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" target="_blank" href="{{website}}">{{website}}</a>
+          </div>
+        {{/if}}
+        {{#if email}}
+          <div class="email">
+            <span class="far fa-envelope"></span>
+            <a href="mailto:{{email}}">{{email}}</a>
+          </div>
+        {{/if}}
+        {{#if phone}}
+          <div class="phone">
+            <span class="fas fa-mobile-alt"></span>
+            <a href="tel:{{phone}}">{{phone}}</a>
+          </div>
+        {{/if}}
+      </div>
+    {{/resume.basics}}
 
     <div id="profiles">
-      {{#if resume.specific.sound.embedUrl}}
-        <div class="username">
-          <span class="fab fa-spotify"></span>
-          {{#if resume.specific.sound.embedUrl}}
-            <span class="url">
-						<a target="_blank" href="{{resume.specific.sound.embedUrl}}">Ma playlist Spotify</a>
-					</span>
-          {{/if}}
-        </div>
-      {{/if}}
-      {{#if profiles.length}}
-        {{#each profiles}}
+      {{#if resume.basics.profiles}}
+        {{#each resume.basics.profiles}}
           <div class="item">
             {{#if network}}
               <div class="username">
                 <span class="fab fa-{{spaceToDash network}} {{spaceToDash network}} social"></span>
-                {{#if url}}
-                  <span class="url">
-						<a target="_blank" href="{{url}}">{{username}}</a>
-					</span>
-                {{else}}
-                  <span>{{username}}</span>
-                {{/if}}
+                <span class="url">
+                  {{#if url}}
+                    {{#if username}}
+                      <a target="_blank" href="{{url}}">{{username}}</a>
+                    {{else}}
+                      <a target="_blank" href="{{url}}">{{capitalize network}}</a>
+                    {{/if}}
+                  {{else}}
+                    {{capitalize network}} : {{username}}
+                  {{/if}}
+                </span>
               </div>
+            {{else}}
+              <span>{{username}}</span>
             {{/if}}
           </div>
         {{/each}}
+      {{/if}}
+      {{#if resume.specific.sound.embedUrl}}
+        <div class="item">
+          <div class="username">
+            <span class="fab fa-spotify"></span>
+            {{#if resume.specific.sound.embedUrl}}
+              <span class="url">
+              <a target="_blank" href="{{resume.specific.sound.embedUrl}}">Ma playlist Spotify</a>
+            </span>
+            {{/if}}
+          </div>
+        </div>
       {{/if}}
     </div>
 

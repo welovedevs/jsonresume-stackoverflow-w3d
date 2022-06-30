@@ -8,6 +8,7 @@ const { birthDate } = require(join(HELPERS, 'birth-date.js'));
 const { dateHelpers } = require(join(HELPERS, 'date-helpers.js'));
 const { paragraphSplit } = require(join(HELPERS, 'paragraph-split.js'));
 const { toLowerCase } = require(join(HELPERS, 'to-lower-case.js'));
+const { capitalize } = require(join(HELPERS, 'capitalize.js'));
 const { spaceToDash } = require(join(HELPERS, 'space-to-dash.js'));
 const { getLevel } = require(join(HELPERS, 'skill-level.js'));
 const { getW3DWord } = require(join(HELPERS, 'w3d-mapper.js'));
@@ -24,6 +25,7 @@ Handlebars.registerHelper('getW3DWord', getW3DWord);
 Handlebars.registerHelper('ifCond', ifCond);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
+Handlebars.registerHelper('capitalize', capitalize);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
 
 function render(resume) {

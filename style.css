@@ -594,6 +594,11 @@ section .location {
   margin-bottom: 1rem;
 }
 
+#profiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /******************
 *	HELPER CLASSES
 ******************/
@@ -665,7 +670,6 @@ section .location {
     display: block;
   }
 }
-
 @media print {
   #profiles a:not(.hide-href-print)::after{
     content: " (" attr(href) ") ";
@@ -770,6 +774,7 @@ section .location {
   #profiles .item {
     padding: 0;
   }
+
   .item.display {
     display: block;
     opacity: 1 !important;
