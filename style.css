@@ -144,7 +144,6 @@ html {
   letter-spacing: 0;
   line-height: 1.46153846;
   text-align: left;
-  -webkit-text-size-adjust: 100%;
 }
 
 p {
@@ -605,12 +604,13 @@ section .location {
   border-left: 5px solid #ff6d1f;
 }
 
-.toggle-item {
-  display: none;
+.section > section > section {
+  margin-bottom: 1rem;
 }
 
-.section > section > section {
-  margin-bottom: 0.5rem;
+#profiles {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /******************
@@ -663,34 +663,6 @@ section .location {
   .section > section:not(.main-summary) {
     margin-left: 1.67rem;
   }
-  .toggle-item {
-    transform: translate(-9999px);
-  }
-  .toggle-item + label {
-    display: block;
-  }
-  .toggle-item:checked + label:after {
-    content: "\f0d7";
-  }
-  .toggle-item + label:after {
-    float: left;
-    cursor: pointer;
-    margin-left: -20px;
-    color: #aaa;
-    font-size: 16px;
-    font-weight: 900;
-    font-family: "Font Awesome 5 Free";
-    content: "\f0da";
-  }
-  .toggle-item ~ .item {
-    height: 0;
-    opacity: 0;
-  }
-  .toggle-item:checked ~ .item {
-    height: auto;
-    opacity: 1;
-    transition: all 0.5s linear;
-  }
   .company::before,
   .institution::before,
   .organization::before,
@@ -712,8 +684,10 @@ section .location {
     display: block;
   }
 }
-
 @media print {
+  #profiles a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
+  }
   #resume {
     margin: 0.1em;
     padding: 0.1em;
@@ -812,6 +786,7 @@ section .location {
   #profiles .item {
     padding: 0;
   }
+
   .item.display {
     display: block;
     opacity: 1 !important;
