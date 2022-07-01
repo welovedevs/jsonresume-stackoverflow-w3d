@@ -187,7 +187,7 @@
     }
   ],
   "specific":{
-    "isFree": false,
+    "isFree": true,
     "profileLink": "https://google.fr",
     "basics":{
       "visaSponsorship":true,

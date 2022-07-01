@@ -20,59 +20,68 @@
       </section>
     {{/resume.specific.work}}
     <section id="work">
-      {{#each resume.work}}
-        <section class="work-item">
-          {{#if position}}
-            <header class="clear">
-              {{#if position}}
-                <div class="position">{{position}}</div>
-              {{/if}}
-              <div class="company">{{name}}</div>
-              <div class="date">
-                {{#if startDate}}
-                  <span class="startDate">{{MY startDate}}</span>
-                  {{#if endDate}}
-                    <span class="endDate">- {{MY endDate}}</span>
-                  {{else}}
-                    <span class="endDate">- Aujourd'hui</span>
-                  {{/if}}
+      {{#if resume.specific.isFree}}
+        <div id="restricted">
+          Cette section n'est pas disponible sans abonnement.
+          {{#if resume.specific.profileLink}}
+            <a target="_blank" href="{{resume.specific.profileLink}}">Rendez-vous sur le profil du candidat pour
+              découvrir ses expériences.</a>{{/if}}
+        </div>
+      {{else}}
+        {{#each resume.work}}
+          <section class="work-item">
+            {{#if position}}
+              <header class="clear">
+                {{#if position}}
+                  <div class="position">{{position}}</div>
                 {{/if}}
-              </div>
-            </header>
-          {{/if}}
+                <div class="company">{{name}}</div>
+                <div class="date">
+                  {{#if startDate}}
+                    <span class="startDate">{{MY startDate}}</span>
+                    {{#if endDate}}
+                      <span class="endDate">- {{MY endDate}}</span>
+                    {{else}}
+                      <span class="endDate">- Aujourd'hui</span>
+                    {{/if}}
+                  {{/if}}
+                </div>
+              </header>
+            {{/if}}
 
-          {{#if location}}
-            <span class="location">
+            {{#if location}}
+              <span class="location">
               <span class="fas fa-map-marker-alt"></span>
               <span class="city">{{location}}</span>
             </span>
-          {{/if}}
+            {{/if}}
 
-          {{#if website}}
-            <span class="website">
+            {{#if website}}
+              <span class="website">
                       <span class="fas fa-external-link-alt"></span>
     		<a target="_blank" href="{{website}}">{{website}}</a>
     	    </span> {{/if}} {{#if keywords.length}}
-          <ul class="keywords">
-            {{#each keywords}}
-              <li>{{.}}</li>
-            {{/each}}
-          </ul>
-        {{/if}}
-          <div class="item" id="work-item">
-            {{#if summary}}
-              <div class="summary">{{paragraphSplit summary}}</div>
-            {{/if}}
-            {{#if highlights.length}}
-              <ul class="highlights">
-                {{#each highlights}}
-                  <li>{{paragraphSplit .}}</li>
-                {{/each}}
-              </ul>
-            {{/if}}
-          </div>
-        </section>
-      {{/each}}
+            <ul class="keywords">
+              {{#each keywords}}
+                <li>{{.}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+            <div class="item" id="work-item">
+              {{#if summary}}
+                <div class="summary">{{paragraphSplit summary}}</div>
+              {{/if}}
+              {{#if highlights.length}}
+                <ul class="highlights">
+                  {{#each highlights}}
+                    <li>{{paragraphSplit .}}</li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </div>
+          </section>
+        {{/each}}
+      {{/if}}
     </section>
   </section>
 {{/if}}
