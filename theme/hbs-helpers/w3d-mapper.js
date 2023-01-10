@@ -20,7 +20,6 @@ const W3DWordsInFrench = {
 };
 
 const getW3DWord = (word) => {
-  console.log('word', word)
   return W3DWordsInFrench[word];
 };
 
