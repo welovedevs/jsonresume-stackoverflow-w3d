@@ -6,8 +6,9 @@ const W3DWordsInFrench = {
   freelance: 'freelance',
   always: 'Télétravail temps complet',
   fullTime: 'Télétravail temps complet',
-  regularly: 'Télétravail régulier',
-  occasionally: 'Télétravail occasionnel',
+  hybrid: 'Télétravail partiel',
+  no: 'Pas de télétravail',
+
   never: 'Pas de télétravail',
   mood: 'Une bonne ambiance',
   challenge: 'du challenge',
@@ -22,5 +23,16 @@ const W3DWordsInFrench = {
 const getW3DWord = (word) => {
   return W3DWordsInFrench[word];
 };
+const getRemoteDays = (node) => {
 
-module.exports = {getW3DWord};
+  const remoteDays = node.remoteFrequency.daysPerWeek;
+  if (remoteDays === 1) {
+    return '1 jour par semaine'
+  }
+  return String(remoteDays) + ` jours par semaine`
+};
+
+module.exports = {
+  getW3DWord,
+  getRemoteDays
+};

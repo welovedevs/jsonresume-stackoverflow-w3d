@@ -220,7 +220,10 @@
         "responsabilities":true,
         "work_hours":true
       },
-      "remoteFrequency":"occasionally"
+      "remoteFrequency": {
+        "frequency" : "hybrid",
+        "daysPerWeek": 3
+      }
     },
     "currentJob":{
 

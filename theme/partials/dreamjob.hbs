@@ -28,17 +28,22 @@
           <div id="perks">
             <h6 class="label">Ce que j'aimerais</h6>
             {{#each perks}}
-                <div class="item">
-                  - {{getW3DWord @key}}
-                </div>
+              <div class="item">
+                - {{getW3DWord @key}}
+              </div>
             {{/each}}
           </div>
         {{/if}}
 
-        {{#if remoteFrequency}}
+        {{#if remoteFrequency.frequency}}
           <div id="remote">
             <h6 class="label">Fréquence travail à distance</h6>
-            <span>{{getW3DWord remoteFrequency}}</span>
+            <span>{{getW3DWord remoteFrequency.frequency}}
+              {{#ifCond remoteFrequency.frequency "===" "hybrid"}}
+                 - {{getRemoteDays ..}}
+              {{/ifCond}}
+            </span>
+
           </div>
         {{/if}}
       </div>

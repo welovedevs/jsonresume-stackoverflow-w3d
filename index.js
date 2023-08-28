@@ -1,21 +1,22 @@
 const Handlebars = require('handlebars');
-const { readFileSync, readdirSync } = require('fs');
-const { join } = require('path');
+const {readFileSync, readdirSync} = require('fs');
+const {join} = require('path');
 
 const HELPERS = join(__dirname, 'theme/hbs-helpers');
 
-const { birthDate } = require(join(HELPERS, 'birth-date.js'));
-const { dateHelpers } = require(join(HELPERS, 'date-helpers.js'));
-const { paragraphSplit } = require(join(HELPERS, 'paragraph-split.js'));
-const { toLowerCase } = require(join(HELPERS, 'to-lower-case.js'));
-const { capitalize } = require(join(HELPERS, 'capitalize.js'));
-const { spaceToDash } = require(join(HELPERS, 'space-to-dash.js'));
-const { getLevel } = require(join(HELPERS, 'skill-level.js'));
-const { getTestLevel } = require(join(HELPERS, 'test-level.js'));
-const { getW3DWord } = require(join(HELPERS, 'w3d-mapper.js'));
-const { ifCond } = require(join(HELPERS, 'ifCond.js'));
+const {birthDate} = require(join(HELPERS, 'birth-date.js'));
+const {dateHelpers} = require(join(HELPERS, 'date-helpers.js'));
+const {paragraphSplit} = require(join(HELPERS, 'paragraph-split.js'));
+const {toLowerCase} = require(join(HELPERS, 'to-lower-case.js'));
+const {capitalize} = require(join(HELPERS, 'capitalize.js'));
+const {spaceToDash} = require(join(HELPERS, 'space-to-dash.js'));
+const {getLevel} = require(join(HELPERS, 'skill-level.js'));
+const {getTestLevel} = require(join(HELPERS, 'test-level.js'));
+const {getW3DWord} = require(join(HELPERS, 'w3d-mapper.js'));
+const {getRemoteDays} = require(join(HELPERS, 'w3d-mapper.js'));
+const {ifCond} = require(join(HELPERS, 'ifCond.js'));
 
-const { MY, Y, DMY } = dateHelpers;
+const {MY, Y, DMY} = dateHelpers;
 
 Handlebars.registerHelper('birthDate', birthDate);
 Handlebars.registerHelper('MY', MY);
@@ -24,10 +25,12 @@ Handlebars.registerHelper('DMY', DMY);
 Handlebars.registerHelper('getLevel', getLevel);
 Handlebars.registerHelper('getTestLevel', getTestLevel);
 Handlebars.registerHelper('getW3DWord', getW3DWord);
+Handlebars.registerHelper('getRemoteDays', getRemoteDays);
 Handlebars.registerHelper('ifCond', ifCond);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('capitalize', capitalize);
+Handlebars.registerHelper('spaceToDash', spaceToDash);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
 
 function render(resume) {
@@ -52,4 +55,4 @@ function render(resume) {
 
 }
 
-module.exports = { render };
+module.exports = {render};
